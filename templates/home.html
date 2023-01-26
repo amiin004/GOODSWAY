@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Best Online Delivery Service | goodsway.com</title>
+    <link rel="stylesheet" href="/static/css/home.css">
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="css/phone.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="/static/images/logo.png" alt="GOODSWAY.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="#client-section">Our Clients</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+            <li class="item"><a href="{% url 'login1' %}">Login </a></li>
+            <li class="item"><a href="{% url 'login' %}">Sign up</a></li>
+           
+            
+            
+        </ul>
+
+    </nav>
+    <div>
+        <section >
+        <div style="
+        position: absolute;
+        background: url('{% static "images/bg1.jpg" %}') no-repeat center center/cover;
+        top:0px;
+        left:0px;
+        width:70%;
+        z-index:-1;
+        margin-botton: 50px;
+        filter:blur(2px);
+
+       
+        
+        " id="home"></div>
+        <div id="home">
+            <h1 class="h-primary">Welcome to GOODSWAY</h1>
+            <p>The most-trusted plateform to get your goods shipped at right place </p>
+            <p>Your satisfaction is our utmost priority!</p>
+            <button class="btn"> Hire Now</button>
+        </div>
+        </section>
+    
+    </div>
+    <div>
+        <section id="services-container">
+            <h1 class="h-primary center">Our Services</h1>
+            <div id="services">
+                <div class="box">
+                    <img src="/static/images/1.png" alt="">
+                    <h2 class="h-secondary center">Proficient drivers</h2>
+                    <p class="center">Experience the peace of mind of having your delivery in the hands of our highly trained and efficient drivers."
+    
+                        "Leave the delivery to the experts – our drivers are the best in the business."
+                        
+                        "Get your delivery safely and efficiently with our team of skilled drivers."</p>
+                </div>
+                <div class="box">
+                    <img src="/static/images/2.png" alt="">
+                    <h2 class="h-secondary center">Warehouse shipping</h2>
+                    <p class="center">Why wait for your order to ship when you can have it on its way in a flash with our warehouse shipping options?"</p>
+                </div>
+                <div class="box">
+                    <img src="/static/images/3.png" alt="">
+                    <h2 class="h-secondary center">Fast delivery tracking</h2>
+                    <p class="center">Get your delivery faster than the speed of light with our lightning-fast delivery service!"
+    
+                        "Your delivery, delivered in the blink of an eye with our ultra-fast delivery options."
+                        
+                        "Experience the convenience of lightning-fast delivery – shop with us today!"</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section style="
+    background: url('{% static "images/bg11.jpg" %}') no-repeat center center/cover;
+    z-index="-1";
+    opacity:0.9;
+    filter: blur(5px);
+    " id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="/static/images/logo1.png" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="/static/images/logo2.png" alt="Our Client">
+            </div>
+          
+            <div class="client-item">
+                <img src="/static/images/logo4.png" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="/static/images/logo3.png" alt="Our Client">
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact" style="
+    background: url('{% static "images/contact.jpg" %}') no-repeat center center/cover;
+    ">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="/home" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="name" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="number" name="number" id="number" placeholder="Enter your phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <input style="background-color: brown;" type="submit" value="submit">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.googsway.com. All rights reserved!
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form - Sagar Developer</title>
+    <link rel="stylesheet" href="/static/css/register_driver.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</head>
+
+<body style="background-image: url('{% static "images/chome.jpg" %}')">
+    <div class="wrapper">
+        <h2>DRIVERS RATTING FORM</h2>
+        <form action="/cusrating" method="post">
+            {% csrf_token %}
+            <!--Account Information Start-->
+            <h4>Account</h4>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" name="username" placeholder="username" required class="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+                <div class="input_box">
+                    <input name="dname" type="text" placeholder="driver name" required class="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="number" name="rating"  truck number="your rating" required class="name">
+                    <i class="fa fa-envelope icon"></i>
+                </div>
+            </div>
+            
+
+            
+            <!--Account Information End-->
+
+
+            <!--Vehicle type Start-->
+   
+            <!--Vehicle End-->
+
+
+            <!--Account Details Start-->
+ 
+           
+            <!--Account  Details End-->
+
+            <div class="input_group">
+                <div class="input_box">
+                    <button type="submit">SUBMIT RATING</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

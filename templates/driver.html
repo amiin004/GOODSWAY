@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin View</title>
+    <link rel="stylesheet" href="/static/css/admin.css">
+    
+</head>
+<body style="background-image: url('{% static "images/chome2.jpg" %}')">
+    <nav id="navbar">
+        <div id="logo">
+            <img src="/static/images/logo.png" alt="GOODSWAY.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#services-container">Where there is a way there is Goodsway.</a></li>
+            <li class="item"><a href="#home"><h1>DRIVER VIEW PAGE</h1></a></li>
+            
+        </ul>
+
+    </nav>
+    
+    <div class="containe">
+        <a href="{% url 'vorders' %}"><button class="btn btn1">pick up orders</button></a>
+        <a href="{% url 'vrating' %}"><button class="btn btn2">view ratings</button></a>
+        <a href="{% url 'ordersh' %}"><button class="btn btn3">order history</button></a>
+    </div>
+    
+</body>
+</html>
